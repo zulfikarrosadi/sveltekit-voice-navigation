@@ -18,7 +18,7 @@
 		if (SpeechRecognition) {
 			recognition = new SpeechRecognition();
 			recognition.continuous = false;
-			recognition.lang = "en-EN";
+			recognition.lang = "id-ID";
 			recognition.interimResults = false;
 
 			recognition.onresult = (event) => {
@@ -37,9 +37,9 @@
 				transcript = currentTranscript.toLowerCase();
 
 				// Simple navigation commands
-				if (transcript.includes("about")) {
+				if (transcript.includes("tentang")) {
 					goto("/about");
-				} else if (transcript.includes("home")) {
+				} else if (transcript.includes("rumah")) {
 					goto("/");
 				}
 			};
